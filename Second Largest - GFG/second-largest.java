@@ -35,18 +35,20 @@ public class Main {
 class Solution {
     int print2largest(int arr[], int n) {
         // 
-     Arrays.sort(arr);
-     
-     
-      int i=n-2;
-      while(i>=0){
-          if(arr[i]!=arr[i+1])return arr[i];
-          else i--;
-          
-      }
-      
-      return -1;
-        
+    int largest=arr[0];
+    
+    for( int i=1;i<arr.length;i++){
+        if(arr[i]>largest){
+            largest=arr[i];
+        }
+    }
+    
+    int seclar=-1;
+    for( int i=0;i<arr.length;i++){
+        if(arr[i]>seclar&&arr[i]<largest)
+        seclar=arr[i];
+    }
+        return seclar;
       
     }
 }
