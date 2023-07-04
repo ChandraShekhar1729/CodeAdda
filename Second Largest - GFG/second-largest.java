@@ -35,20 +35,42 @@ public class Main {
 class Solution {
     int print2largest(int arr[], int n) {
         // 
+    // int largest=arr[0];
+    
+    // for( int i=1;i<arr.length;i++){
+    //     if(arr[i]>largest){
+    //         largest=arr[i];
+    //     }
+    // }
+    
+    // int seclar=-1;
+    // for( int i=0;i<arr.length;i++){
+    //     if(arr[i]>seclar&&arr[i]<largest)
+    //     seclar=arr[i];
+    // }
+    //     return seclar;
+    
+    
+    
+    
     int largest=arr[0];
+    int smallest=-1;
     
     for( int i=1;i<arr.length;i++){
+        
         if(arr[i]>largest){
+            smallest=largest;
             largest=arr[i];
         }
+        
+        if(arr[i]<largest){
+            if(arr[i]>smallest)
+            smallest=arr[i];
+        }
+        
     }
+    return smallest;
     
-    int seclar=-1;
-    for( int i=0;i<arr.length;i++){
-        if(arr[i]>seclar&&arr[i]<largest)
-        seclar=arr[i];
-    }
-        return seclar;
       
     }
 }
