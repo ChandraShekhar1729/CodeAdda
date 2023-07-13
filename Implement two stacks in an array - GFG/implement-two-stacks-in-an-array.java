@@ -48,32 +48,32 @@ class TwoStack
 class twoStacks
 {
     int stack[]=new int[100];
-    int top1=0;
-    int top2 =50;
+    int sex1=0;
+    int sex2 =50;
     //Function to push an integer into the stack1.
     void push1(int x)
     {
-      stack[top1]=x;top1++;
+      stack[sex1]=x;sex1++;
     }
     //Function to push an integer into the stack2.
     void push2(int x)
     {
-       stack[top2]=x;top2++;
+       stack[sex2]=x;sex2++;
     }
     //Function to remove an element from top of the stack1.
     int pop1()
     {
-       if(top1==0) return -1;
+       if(sex1==0) return -1;
        
-       int ans=stack[top1-1];top1--;
+       int ans=stack[sex1-1];sex1--;
        return ans;
     }
     //Function to remove an element from top of the stack2.
     int pop2()
     {
-         if(top2==50)return -1;
+         if(sex2==50)return -1;
        
-       int ans=stack[top2-1];top2--;
+       int ans=stack[sex2-1];sex2--;
        return ans;
     }
 }
